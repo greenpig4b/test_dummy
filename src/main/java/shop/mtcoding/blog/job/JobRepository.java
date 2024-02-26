@@ -11,9 +11,13 @@ import java.util.List;
 @RequiredArgsConstructor // final
 @Repository
 public class JobRepository {
-    private EntityManager em;
 
-//    public List<Job> SelectJobAll(){
-//        Query query = em.createQuery("select * from job_tb order by id desc",Job.class);
-//    }
+    private final EntityManager em;
+
+   public List<Job> SelectAll(){
+       Query query = em.createNativeQuery("select * from job_tb order by id desc",Job.class);
+       List<Job> jobList = query.getResultList();
+
+       return jobList;
+   }
 }
