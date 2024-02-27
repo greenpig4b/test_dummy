@@ -1,5 +1,6 @@
 package shop.mtcoding.blog.Job;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import shop.mtcoding.blog.job.Job;
@@ -14,7 +15,10 @@ public class Skill_Test {
     @Autowired
     private JobRepository jobRepository;
 
-    List<Job> jobList = jobRepository.SelectAll();
-
-
+    @Test
+    public void skill_Test(){
+//        List<Job> jobList = jobRepository.SelectAll();
+//        List<JobRequest.JobResponseDTO>
+    }
 }
+
