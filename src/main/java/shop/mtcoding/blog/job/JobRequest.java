@@ -5,9 +5,10 @@ import lombok.Data;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.List;
 
 public class JobRequest {
-    @Builder
+
     @Data
     public class JobselectDTO{
         private Integer id;
@@ -17,10 +18,15 @@ public class JobRequest {
         private String edu;
         private String position;
         private String address;
-        private String requiredSkill;
+        private List<JobSkillDTO> requiredSkill;
         private String companyName;
         private Date deadLine;
         private Timestamp createdAt;
+    }
+
+    @Data
+    public class JobSkillDTO{
+        private String name;
     }
 
 }

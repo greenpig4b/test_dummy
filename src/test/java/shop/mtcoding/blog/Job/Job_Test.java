@@ -31,6 +31,7 @@ public class Job_Test {
             System.out.println(result.getCompanyName());
             System.out.println(result.getDeadLine());
             System.out.println(result.getCreatedAt());
+            System.out.println(result.getRequiredSkill());
             System.out.println("-*-*-*-*-*-*-*-*-*");
         }
     }
